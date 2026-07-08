@@ -11,7 +11,6 @@ Reporte_NH3_Grignon.pdf
 Informe_Diversidad_Fungica_Sascaberas.pdf
 README.md
 ```
-⚠️ Sube TODOS estos archivos manteniendo la carpeta `img/`. Los enlaces son relativos.
 
 ## Publicar en GitHub Pages (recomendado: subir archivos, no pegar)
 1. Crea el repositorio `yollotl-mumina.github.io` (o `portafolio`).
