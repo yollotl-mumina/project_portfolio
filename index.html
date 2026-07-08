@@ -158,6 +158,10 @@ section{ position:relative; padding-block:clamp(64px,9vw,116px); }
 .cert__badge{ width:34px; height:34px; border-radius:9px; background:color-mix(in srgb,var(--cenote) 16%,transparent); display:grid; place-items:center; color:var(--cenote-dp); font-family:"Bricolage Grotesque",sans-serif; font-weight:700; margin-bottom:.4rem }
 .cert h3{ font-size:1.02rem; font-weight:700; line-height:1.25 }
 .cert__courses{ color:var(--ink-soft); font-size:.88rem; margin:0 }
+.cert__list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:7px }
+.cert__list a{ display:flex; gap:.4rem; align-items:flex-start; text-decoration:none; color:var(--ink-soft); font-size:.86rem; line-height:1.35; transition:color .18s }
+.cert__list a::before{ content:"↗"; color:var(--cenote-dp); font-weight:700; flex:none }
+.cert__list a:hover{ color:var(--cenote-dp) }
 
 /* ===== GALERÍA ===== */
 .gallery{ display:grid; grid-auto-flow:dense; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:14px; grid-auto-rows:200px }
@@ -377,7 +381,7 @@ a:focus-visible,button:focus-visible{ outline:3px solid var(--cenote); outline-o
     <div class="sec-head reveal">
       <p class="label eyebrow" data-i18n="pub.eyebrow">Publicaciones</p>
       <h2 class="section-title" data-i18n="pub.title">Investigación y reportes</h2>
-      <p data-i18n="pub.intro">Tesis y reportes de investigación. Añade el enlace de cada documento cuando esté disponible.</p>
+      <p data-i18n="pub.intro">Tesis y reportes de investigación.</p>
     </div>
     <div class="reveal">
       <div class="pub">
@@ -419,28 +423,44 @@ a:focus-visible,button:focus-visible{ outline:3px solid var(--cenote); outline-o
     <div class="certs">
       <div class="cert reveal">
         <div class="cert__badge">✦</div>
-        <h3>Centro de Altos Estudios en Geomática</h3>
-        <p class="cert__courses" data-i18n="crt1.crs">Python para ciencia de datos espaciales · Análisis espacial en la nube con Python y Google Colab · SQL espacial</p>
+        <h3>Centro de Altos Estudios en Geomática (CAEG)</h3>
+        <ul class="cert__list">
+          <li><a href="cert/CAEG_DatosEspaciales.pdf" target="_blank" rel="noopener">Diplomado internacional · Experto en Ciencia de Datos Espaciales con Python (240 h)</a></li>
+          <li><a href="cert/CAEG_Colab.pdf" target="_blank" rel="noopener">Análisis espacial en la nube con Python y Google Colab (48 h)</a></li>
+          <li><a href="cert/CAEG_Python.pdf" target="_blank" rel="noopener">Python aplicado a la ciencia de datos espaciales (48 h)</a></li>
+          <li><a href="cert/CAEG_SpatialSQL.pdf" target="_blank" rel="noopener">Spatial SQL y Python aplicado al análisis de datos espaciales (48 h)</a></li>
+        </ul>
       </div>
       <div class="cert reveal">
         <div class="cert__badge">✦</div>
         <h3>Pontificia Universidad Católica de Chile</h3>
-        <p class="cert__courses" data-i18n="crt2.crs">Analítica de datos para la gestión agrícola</p>
+        <ul class="cert__list">
+          <li><a href="https://www.credential.net/f1f21e9f-6dcc-4d42-adea-f8817b379b54#acc.FvdsWlw5" target="_blank" rel="noopener">Analítica de datos para la gestión agrícola</a></li>
+        </ul>
       </div>
       <div class="cert reveal">
         <div class="cert__badge">✦</div>
-        <h3>Asociación Mexicana de Estudios del Karst</h3>
-        <p class="cert__courses" data-i18n="crt3.crs">Ciencia del suelo aplicada a la evaluación de tierras en el trópico mexicano</p>
+        <h3>Instituto Tecnológico de Chiná · TecNM</h3>
+        <ul class="cert__list">
+          <li><a href="cert/Edafologia_China.pdf" target="_blank" rel="noopener">XI Diplomado en Edafología Aplicada · Evaluación de tierras en el trópico mexicano (166 h)</a></li>
+        </ul>
       </div>
       <div class="cert reveal">
         <div class="cert__badge">✦</div>
         <h3>Ancora Academy</h3>
-        <p class="cert__courses" data-i18n="crt4.crs">Evaluación de impacto ambiental y análisis de riesgo</p>
+        <ul class="cert__list">
+          <li><a href="cert/Ancora_ImpactoAmbiental.pdf" target="_blank" rel="noopener">Manifiesto de impacto ambiental (16 h)</a></li>
+          <li><a href="cert/Ancora_ImpactoAmbiental.pdf" target="_blank" rel="noopener">Evaluación de impacto ambiental (12 h)</a></li>
+          <li><a href="cert/Ancora_ImpactoAmbiental.pdf" target="_blank" rel="noopener">Estudio de riesgo ambiental (24 h)</a></li>
+        </ul>
       </div>
       <div class="cert reveal">
         <div class="cert__badge">✦</div>
         <h3>Global Standards</h3>
-        <p class="cert__courses" data-i18n="crt5.crs">FSSC 22000 V6 · HACCP Alliance (implementación de sistemas de certificación)</p>
+        <ul class="cert__list">
+          <li><a href="cert/FSSC_22000.pdf" target="_blank" rel="noopener">Implementación FSSC 22000 V6 para la industria alimentaria (70 h)</a></li>
+          <li><a href="cert/HACCP_Avanzado.pdf" target="_blank" rel="noopener">HACCP Alliance (Avanzado) · Verificación, validación y mejora continua (16 h)</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -454,7 +474,7 @@ a:focus-visible,button:focus-visible{ outline:3px solid var(--cenote); outline-o
     <div class="sec-head reveal">
       <p class="label eyebrow" data-i18n="gal.eyebrow">Evidencia</p>
       <h2 class="section-title" data-i18n="gal.title">En el campo y el laboratorio</h2>
-      <p data-i18n="gal.intro">Fotografías de muestreo, análisis, estancias y presentaciones. Sustituye cada bloque por tu imagen (ver README).</p>
+      <p data-i18n="gal.intro">Registro visual del trabajo de campo, las estancias de investigación y el trabajo en comunidades.</p>
     </div>
     <div class="gallery reveal">
       <div class="gitem wide tall gcarousel" role="group" aria-label="Estancia en AgroParisTech">
@@ -471,10 +491,6 @@ a:focus-visible,button:focus-visible{ outline:3px solid var(--cenote); outline-o
         <span class="gdots" aria-hidden="true"><i class="gdot is-active"></i><i class="gdot"></i><i class="gdot"></i><i class="gdot"></i></span>
         <span class="gitem__cap" data-i18n="g1">Muestreo de suelo en campo · Campeche</span>
       </div>
-      <a class="gitem" href="#" style="--ph:linear-gradient(150deg,var(--cenote),var(--cenote-dp))">
-        <span class="gitem__hint" data-i18n="gal.replace">Reemplazar foto</span>
-        <span class="gitem__cap" data-i18n="g2">Análisis en laboratorio</span>
-      </a>
       <div class="gitem wide tall gcarousel" role="group" aria-label="Trabajo en comunidades y asesorías técnicas">
         <img loading="lazy" class="gslide is-active" src="img/comunidades-1.jpg" alt="Trabajo en comunidades y asesorías técnicas">
         <img loading="lazy" class="gslide" src="img/comunidades-2.jpg" alt="Trabajo en comunidades y asesorías técnicas">
@@ -487,10 +503,6 @@ a:focus-visible,button:focus-visible{ outline:3px solid var(--cenote); outline-o
         <span class="gdots" aria-hidden="true"><i class="gdot is-active"></i><i class="gdot"></i><i class="gdot"></i><i class="gdot"></i><i class="gdot"></i><i class="gdot"></i><i class="gdot"></i><i class="gdot"></i></span>
         <span class="gitem__cap" data-i18n="g4">Trabajo en comunidades y asesorías técnicas · Yucatán</span>
       </div>
-      <a class="gitem" href="#" style="--ph:linear-gradient(150deg,var(--ochre),var(--h3))">
-        <span class="gitem__hint" data-i18n="gal.replace">Reemplazar foto</span>
-        <span class="gitem__cap" data-i18n="g5">Presentación de resultados</span>
-      </a>
     </div>
     </div>
 </section>
@@ -587,20 +599,20 @@ const translations = {
     "p4.cat":"SIG · Análisis","p4.title":"Sistemas agroecológicos en transición · Kantunil","p4.desc":"Evaluación socioeconómica de sistemas de producción rural con análisis estadístico (Jamovi, Excel), tableros en Power BI y análisis espacial en QGIS.",
     "p5.cat":"Ciencia de datos espaciales","p5.title":"Flujos reproducibles de datos espaciales","p5.desc":"Procesamiento y análisis de datos de suelo a escala nacional con Python, SQL espacial y Google Colab; flujos reproducibles de limpieza, análisis y visualización.",
     "p6.cat":"Divulgación · Incidencia","p6.title":"Justicia energética y agrovoltaica","p6.desc":"Incidencia sobre una transición energética justa, agrovoltaica y consulta indígena en Yucatán. Escuela de Liderazgo Climático 2026.",
-    "link.repo":"Ver repositorio","link.report":"Ver reporte","link.more":"Saber más",
-    "pub.eyebrow":"Publicaciones","pub.title":"Investigación y reportes","pub.intro":"Tesis y reportes de investigación. Añade el enlace de cada documento cuando esté disponible.",
+    "link.repo":"Ver repositorio","link.more":"Saber más",
+    "pub.eyebrow":"Publicaciones","pub.title":"Investigación y reportes","pub.intro":"Tesis y reportes de investigación.",
     "pub.t.report":"Reporte técnico","pub.t.thesis":"Tesis","pub.pdf":"PDF",
     "pub1.title":"Modeling NH₃ volatilization across seven cropping systems on the Trajectoire platform","pub1.venue":"Reporte de estancia · AgroParisTech · UMR ECOSYS",
     "pub2.title":"Funciones de pedotransferencia basadas en machine learning para suelos de Yucatán","pub2.venue":"Tesis de licenciatura · UADY (en preparación)",
     "pub3.title":"Diversidad microbiana en agroecosistemas de Yucatán: metabarcoding ITS con QIIME 2 y phyloseq","pub3.venue":"Reporte de investigación · UADY",
     "cert.eyebrow":"Formación","cert.title":"Diplomados y certificaciones","cert.intro":"Formación profesional en ciencia de datos, geomática, ciencia del suelo y evaluación ambiental.",
-    "crt1.crs":"Python para ciencia de datos espaciales · Análisis espacial en la nube con Python y Google Colab · SQL espacial",
-    "crt2.crs":"Analítica de datos para la gestión agrícola",
-    "crt3.crs":"Ciencia del suelo aplicada a la evaluación de tierras en el trópico mexicano",
-    "crt4.crs":"Evaluación de impacto ambiental y análisis de riesgo",
-    "crt5.crs":"FSSC 22000 V6 · HACCP Alliance (implementación de sistemas de certificación)",
-    "gal.eyebrow":"Evidencia","gal.title":"En el campo y el laboratorio","gal.intro":"Fotografías de muestreo, análisis, estancias y presentaciones.","gal.replace":"Reemplazar foto",
-    "g1":"Muestreo de suelo en campo · Campeche","g2":"Análisis en laboratorio","g3":"Estancia en AgroParisTech · París","g4":"Trabajo en comunidades y asesorías técnicas · Yucatán","g5":"Presentación de resultados",
+    
+    
+    
+    
+    
+    "gal.eyebrow":"Evidencia","gal.title":"En el campo y el laboratorio","gal.intro":"Registro visual del trabajo de campo, las estancias de investigación y el trabajo en comunidades.",
+    "g1":"Muestreo de suelo en campo · Campeche","g3":"Estancia en AgroParisTech · París","g4":"Trabajo en comunidades y asesorías técnicas · Yucatán",
     "about.eyebrow":"Sobre mí","about.title":"Del campo al modelo",
     "about.p1":"Soy estudiante de <b>Agroecología</b> apasionada por la ciencia del suelo y por lo que los datos revelan sobre los agroecosistemas. Me muevo con la misma comodidad tomando una muestra en campo que escribiendo el pipeline que la convierte en un modelo reproducible.",
     "about.p2":"Mi trabajo conecta los <b>suelos del trópico y del karst de Yucatán</b> —delgados sobre caliza, la milpa, la roza-tumba-quema— con métodos cuantitativos: inventarios de emisiones, machine learning y análisis geoespacial. Me interesa que la ciencia sea útil y justa, con la mirada en la transición energética y la consulta a los pueblos indígenas.",
@@ -626,20 +638,20 @@ const translations = {
     "p4.cat":"GIS · Analysis","p4.title":"Agroecological systems in transition · Kantunil","p4.desc":"Socio-economic assessment of rural production systems with statistical analysis (Jamovi, Excel), Power BI dashboards and spatial analysis in QGIS.",
     "p5.cat":"Spatial data science","p5.title":"Reproducible spatial-data workflows","p5.desc":"National-scale soil-data processing and analysis with Python, Spatial SQL and Google Colab; reproducible cleaning, analysis and visualization workflows.",
     "p6.cat":"Outreach · Advocacy","p6.title":"Energy justice & agrivoltaics","p6.desc":"Advocacy for a just energy transition, agrivoltaics and Indigenous consultation in Yucatán. Climate Leadership School 2026.",
-    "link.repo":"View repository","link.report":"View report","link.more":"Learn more",
-    "pub.eyebrow":"Publications","pub.title":"Research & reports","pub.intro":"Theses and research reports. Add each document's link when available.",
+    "link.repo":"View repository","link.more":"Learn more",
+    "pub.eyebrow":"Publications","pub.title":"Research & reports","pub.intro":"Theses and research reports.",
     "pub.t.report":"Technical report","pub.t.thesis":"Thesis","pub.pdf":"PDF",
     "pub1.title":"Modeling NH₃ volatilization across seven cropping systems on the Trajectoire platform","pub1.venue":"Research-stay report · AgroParisTech · UMR ECOSYS",
     "pub2.title":"Machine-learning pedotransfer functions for Yucatán soils","pub2.venue":"Undergraduate thesis · UADY (in progress)",
     "pub3.title":"Microbial diversity in Yucatán agroecosystems: ITS metabarcoding with QIIME 2 and phyloseq","pub3.venue":"Research report · UADY",
     "cert.eyebrow":"Training","cert.title":"Diplomas & certifications","cert.intro":"Professional training in data science, geomatics, soil science and environmental assessment.",
-    "crt1.crs":"Python for Spatial Data Science · Cloud-based spatial analysis with Python & Google Colab · Spatial SQL",
-    "crt2.crs":"Data Analytics for Agricultural Management",
-    "crt3.crs":"Soil science applied to land evaluation in the Mexican tropics",
-    "crt4.crs":"Environmental impact assessment & risk analysis",
-    "crt5.crs":"FSSC 22000 V6 · HACCP Alliance (certification-system implementation)",
-    "gal.eyebrow":"Evidence","gal.title":"In the field & the lab","gal.intro":"Photos of sampling, analysis, research stays and talks. ","gal.replace":"Replace photo",
-    "g1":"Soil sampling in the field · Campeche","g2":"Laboratory analysis","g3":"Research stay at AgroParisTech · Paris","g4":"Community work and technical advisory · Yucatán","g5":"Presenting results",
+    
+    
+    
+    
+    
+    "gal.eyebrow":"Evidence","gal.title":"In the field & the lab","gal.intro":"A visual record of fieldwork, research stays and community work.",
+    "g1":"Soil sampling in the field · Campeche","g3":"Research stay at AgroParisTech · Paris","g4":"Community work and technical advisory · Yucatán",
     "about.eyebrow":"About","about.title":"From field to model",
     "about.p1":"I'm an <b>Agroecology</b> student passionate about soil science and about what data reveal about agroecosystems. I'm as comfortable taking a field sample as writing the pipeline that turns it into a reproducible model.",
     "about.p2":"My work connects the <b>tropical and karst soils of Yucatán</b> —thin over limestone, the milpa, slash-and-burn— with quantitative methods: emission inventories, machine learning and geospatial analysis. I care about science that is useful and fair, with an eye on the energy transition and consultation with Indigenous peoples.",
@@ -665,20 +677,20 @@ const translations = {
     "p4.cat":"SIG · Analyse","p4.title":"Systèmes agroécologiques en transition · Kantunil","p4.desc":"Évaluation socio-économique de systèmes de production ruraux avec analyse statistique (Jamovi, Excel), tableaux de bord Power BI et analyse spatiale sous QGIS.",
     "p5.cat":"Science des données spatiales","p5.title":"Flux reproductibles de données spatiales","p5.desc":"Traitement et analyse de données de sol à l'échelle nationale avec Python, SQL spatial et Google Colab ; flux reproductibles de nettoyage, d'analyse et de visualisation.",
     "p6.cat":"Médiation · Plaidoyer","p6.title":"Justice énergétique et agrivoltaïsme","p6.desc":"Plaidoyer pour une transition énergétique juste, l'agrivoltaïsme et la consultation autochtone au Yucatán. École de Leadership Climatique 2026.",
-    "link.repo":"Voir le dépôt","link.report":"Voir le rapport","link.more":"En savoir plus",
-    "pub.eyebrow":"Publications","pub.title":"Recherche et rapports","pub.intro":"Thèses et rapports de recherche. Ajoutez le lien de chaque document lorsqu'il sera disponible.",
+    "link.repo":"Voir le dépôt","link.more":"En savoir plus",
+    "pub.eyebrow":"Publications","pub.title":"Recherche et rapports","pub.intro":"Thèses et rapports de recherche.",
     "pub.t.report":"Rapport technique","pub.t.thesis":"Thèse","pub.pdf":"PDF",
     "pub1.title":"Modeling NH₃ volatilization across seven cropping systems on the Trajectoire platform","pub1.venue":"Rapport de séjour · AgroParisTech · UMR ECOSYS",
     "pub2.title":"Fonctions de pédotransfert par machine learning pour les sols du Yucatán","pub2.venue":"Mémoire de licence · UADY (en cours)",
     "pub3.title":"Diversité microbienne dans les agroécosystèmes du Yucatán : métabarcoding ITS avec QIIME 2 et phyloseq","pub3.venue":"Rapport de recherche · UADY",
     "cert.eyebrow":"Formation","cert.title":"Diplômes et certifications","cert.intro":"Formation professionnelle en science des données, géomatique, science du sol et évaluation environnementale.",
-    "crt1.crs":"Python pour la science des données spatiales · Analyse spatiale sur le cloud avec Python et Google Colab · SQL spatial",
-    "crt2.crs":"Analytique de données pour la gestion agricole",
-    "crt3.crs":"Science du sol appliquée à l'évaluation des terres dans les tropiques mexicains",
-    "crt4.crs":"Évaluation d'impact environnemental et analyse des risques",
-    "crt5.crs":"FSSC 22000 V6 · HACCP Alliance (mise en œuvre de systèmes de certification)",
-    "gal.eyebrow":"Preuves","gal.title":"Sur le terrain et au laboratoire","gal.intro":"Photos d'échantillonnage, d'analyses, de séjours et de présentations. ","gal.replace":"Remplacer la photo",
-    "g1":"Échantillonnage de sol sur le terrain · Campeche","g2":"Analyses au laboratoire","g3":"Séjour à AgroParisTech · Paris","g4":"Travail communautaire et conseil technique · Yucatán","g5":"Présentation des résultats",
+    
+    
+    
+    
+    
+    "gal.eyebrow":"Preuves","gal.title":"Sur le terrain et au laboratoire","gal.intro":"Un aperçu du travail de terrain, des séjours de recherche et du travail communautaire.",
+    "g1":"Échantillonnage de sol sur le terrain · Campeche","g3":"Séjour à AgroParisTech · Paris","g4":"Travail communautaire et conseil technique · Yucatán",
     "about.eyebrow":"À propos","about.title":"Du terrain au modèle",
     "about.p1":"Je suis étudiante en <b>agroécologie</b>, passionnée par la science du sol et par ce que les données révèlent des agroécosystèmes. Je suis aussi à l'aise pour prélever un échantillon sur le terrain que pour écrire le pipeline qui le transforme en modèle reproductible.",
     "about.p2":"Mon travail relie les <b>sols tropicaux et karstiques du Yucatán</b> —minces sur calcaire, la milpa, l'agriculture sur brûlis— à des méthodes quantitatives : inventaires d'émissions, machine learning et analyse géospatiale. Je tiens à une science utile et juste, attentive à la transition énergétique et à la consultation des peuples autochtones.",
